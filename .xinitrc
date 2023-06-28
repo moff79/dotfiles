@@ -63,7 +63,7 @@ setxkbmap -model pc105 -layout us,ar -option 'grp:ctrl_space_toggle' &
 dwmblocks &
 nitrogen --restore &
 picom --experimental-backends &
-
+flameshot &
 
 # reload dwm
 while true; do
