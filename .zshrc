@@ -7,6 +7,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:~/.local/share/bin/statusbar
 export PATH=$PATH:~/.local/share/bin/scripts
+export PATH=$PATH:~/apps
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
