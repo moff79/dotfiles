@@ -9,6 +9,7 @@ static const unsigned int gappx     = 6;        /* gaps between windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
+static const Bool viewontag         = True;     /* Switch view on tag switch */
 static const int horizpadbar        = 6;        /* horizontal padding for statusbar */
 static const int vertpadbar         = 7;        /* vertical padding for statusbar */
 static const char *fonts[]     = {"Ubuntu:weight=bold:size=9:antialias=true:hinting=true",
@@ -37,7 +38,18 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   isfakefullscreen monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           0,               -1 },
-	{ "Google-chrome",  NULL,       NULL,       1 << 8,       0,           1,               1 },
+	{ "TelegramDesktop",     NULL,       NULL,       0,            1,           0,               -1 },
+        { "libreoffice-startcenter",     NULL,       NULL,       0,            1,           0,               -1 },
+	{ "soffice",     NULL,       NULL,       0,            1,           0,               -1 },
+        { "ark",     NULL,       NULL,       0,            1,           0,               -1 },
+        { "File-roller",     NULL,       NULL,       0,            1,           0,               -1 },
+        { "Blender",     NULL,       NULL,       0,            1,           0,               -1 },
+	{ "xdman-Main",     NULL,       NULL,       0,            1,           0,               -1 },
+        { "mpv",     NULL,       NULL,       0,            1,           0,               -1 },
+        { "Gpicview",     NULL,       NULL,       0,            1,           0,               -1 },
+	{ "vlc",     NULL,       NULL,       0,            1,           0,               -1 },
+        { "Google-chrome",  NULL,       NULL,       0,       0,           1,              -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           1,               1 },
 };
 
 /* layout(s) */
@@ -69,6 +81,8 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *termcmd[]  = { "st", NULL };
 
+#include "movestack.c"
+
 static const Key keys[] = {
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_F11, spawn, {.v = downvol } },
@@ -83,6 +97,8 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY|ShiftMask,             XK_j,      movestack,      {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_k,      movestack,      {.i = -1 } },
 	{ MODKEY,                       XK_Return, zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY|ShiftMask,             XK_c,      killclient,     {0} },
@@ -107,6 +123,8 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
 	{ MODKEY|ShiftMask,             XK_q,      quit,           {0} },
+        { MODKEY|ShiftMask,	        XK_s,	   spawn,	SHCMD("systemctl suspend") },
+        { MODKEY|ShiftMask,	        XK_f,	   spawn,	SHCMD("flameshot gui") },
 };
 
 /* button definitions */
