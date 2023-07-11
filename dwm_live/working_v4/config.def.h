@@ -39,6 +39,8 @@ static const Rule rules[] = {
 	/* class      instance    title       tags mask     isfloating   isfakefullscreen monitor */
 	{ "Gimp",     NULL,       NULL,       0,            1,           0,               -1 },
 	{ "TelegramDesktop",     NULL,       NULL,       0,            1,           0,               -1 },
+        { "tahoma2d",     NULL,       NULL,       0,            1,           0,               -1 },
+        { "OpenToonz",     NULL,       NULL,       0,            1,           0,               -1 },
 	{ "qBittorrent",     NULL,       NULL,       0,            1,           0,               -1 },
         { "libreoffice-startcenter",     NULL,       NULL,       0,            1,           0,               -1 },
 	{ "soffice",     NULL,       NULL,       0,            1,           0,               -1 },
