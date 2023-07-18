@@ -4,10 +4,11 @@ if [[ -z $DISPLAY ]] && [[ $(tty) = /dev/tty1 ]]; then
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:~/.local/share/bin/statusbar
 export PATH=$PATH:~/.local/share/bin/scripts
 export PATH=$PATH:~/apps
+export PATH=$PATH:/opt/opentoonz/bin
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -128,6 +129,8 @@ alias lg='exa --icons -l --group-directories-first'
 
 alias vim='nvim'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles --work-tree=$HOME'
+
+alias mac='sudo apfs-fuse -o uid=7dcca1bc-f6b2-4fd4-a996-33117b0,allow_other /dev/sda2 /mnt'
 
 
 

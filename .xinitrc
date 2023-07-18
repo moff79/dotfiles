@@ -72,4 +72,3 @@ done
 
 exec dwm
 
-
