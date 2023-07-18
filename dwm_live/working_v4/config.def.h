@@ -41,7 +41,7 @@ static const Rule rules[] = {
 	{ "TelegramDesktop",     NULL,       NULL,       0,            1,           0,               -1 },
 	{ "VirtualBox Manager",     NULL,       NULL,       0,            1,           0,               -1 },
 	{ "Genymotion",     NULL,       NULL,       0,            1,           0,               -1 },
-        { "tahoma2d",     NULL,       NULL,       0,            1,           0,               -1 },
+        { "Tahoma2D",     NULL,       NULL,       0,            1,           0,               -1 },
         { "OpenToonz",     NULL,       NULL,       0,            1,           0,               -1 },
 	{ "qBittorrent",     NULL,       NULL,       0,            1,           0,               -1 },
         { "libreoffice-startcenter",     NULL,       NULL,       0,            1,           0,               -1 },

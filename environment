@@ -1,0 +1,10 @@
+#
+# This file is parsed by pam_env module
+#
+# Syntax: simple "KEY=VAL" pairs on separate lines
+#
+#CYCLES_ONEAPI_ALL_DEVICES=1 blender
+#MESA_LOADER_DRIVER_OVERRIDE=i965
+export PATH=$PATH:/opt/opentoonz/bin
+export PATH=$PATH:/opt/tahoma2d/bin
+#MESA_GLSL_VERSION_OVERRIDE=330
