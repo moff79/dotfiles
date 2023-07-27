@@ -9,6 +9,9 @@ export PATH=$PATH:~/.local/share/bin/statusbar
 export PATH=$PATH:~/.local/share/bin/scripts
 export PATH=$PATH:~/apps
 export PATH=$PATH:/opt/opentoonz/bin
+export PATH=$PATH:/opt/tahoma2d/bin
+export LD_LIBRARY_PATH=/usr/lib/wsl/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:FOUND_PATH_FROM_2a
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
